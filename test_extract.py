@@ -1,7 +1,7 @@
 from extract_skills import extract_skills, extract_verbs
 
 def test_extract_basic():
-    text = "Experience in Power Apps and SharePoint Online."
+    text = "Experience with Power Apps and SharePoint Online."
     skills = extract_skills(text)
 
     assert "Power Apps" in skills
