@@ -1,0 +1,4 @@
+We are looking for a Power Platform Developer with experience in Power Apps,
+Power Automate, Dataverse, SharePoint Online, Microsoft Teams integrations,
+Azure DevOps CI/CD pipelines, and Dynamics 365 Finance & Operations.
+Knowledge of Power BI visualizations is a plus.
