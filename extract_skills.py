@@ -28,6 +28,17 @@ SKILLS_DB = [
     "API",
     "Python"
 ]
+ACTION_VERBS = [
+    "design", "develop", "build", "automate", "deploy",
+    "configure", "customize", "implement", "integrate"
+]
+
+def extract_verbs(text):
+    found = []
+    for verb in ACTION_VERBS:
+        if verb.lower() in text.lower():
+            found.append(verb)
+    return sorted(set(found))
 
 
 def extract_skills(text):
@@ -46,7 +57,12 @@ def main():
     text = JD_FILE.read_text(encoding="utf-8")
     skills = extract_skills(text)
 
-    OUT_FILE.write_text(json.dumps(skills, indent=2))
+   result = {
+    "skills": skills,
+    "action_verbs": extract_verbs(text)
+}
+OUT_FILE.write_text(json.dumps(result, indent=2))
+
     print("✅ Skills extracted and saved to skills.json")
     print(skills)
 
